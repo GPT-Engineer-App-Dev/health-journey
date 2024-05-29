@@ -1,5 +1,5 @@
 import { Box, Container, Flex, Heading, VStack, Text, IconButton, Button } from "@chakra-ui/react";
-import { FaRunning, FaDumbbell, FaChartLine } from "react-icons/fa";
+import { FaRunning, FaDumbbell, FaChartLine, FaChartBar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -11,6 +11,7 @@ const Index = () => {
           <IconButton aria-label="Dashboard" icon={<FaChartLine />} variant="ghost" color="white" />
           <IconButton aria-label="Activities" icon={<FaRunning />} variant="ghost" color="white" />
           <IconButton aria-label="Workouts" icon={<FaDumbbell />} variant="ghost" color="white" />
+          <IconButton aria-label="Progress" icon={<FaChartBar />} variant="ghost" color="white" />
         </Flex>
       </Flex>
 
@@ -30,6 +31,14 @@ const Index = () => {
           <Text>Log your workouts to keep track of your progress.</Text>
           <Link to="/workout-log">
             <Button colorScheme="blue" mt={4}>Log a Workout</Button>
+          </Link>
+        </Box>
+
+        <Box w="full" p={4} bg="gray.100" borderRadius="md" boxShadow="md">
+          <Heading size="md" mb={4}>Progress Tracking</Heading>
+          <Text>View your progress over time.</Text>
+          <Link to="/progress-tracking">
+            <Button colorScheme="blue" mt={4}>View Progress</Button>
           </Link>
         </Box>
       </VStack>
