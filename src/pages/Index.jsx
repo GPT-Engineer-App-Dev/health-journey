@@ -1,5 +1,6 @@
-import { Box, Container, Flex, Heading, VStack, Text, IconButton } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, VStack, Text, IconButton, Button } from "@chakra-ui/react";
 import { FaRunning, FaDumbbell, FaChartLine } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -22,6 +23,14 @@ const Index = () => {
         <Box w="full" p={4} bg="gray.100" borderRadius="md" boxShadow="md">
           <Heading size="md" mb={4}>Activity Tracking</Heading>
           <Text>Placeholder for user input and activity tracking</Text>
+        </Box>
+
+        <Box w="full" p={4} bg="gray.100" borderRadius="md" boxShadow="md">
+          <Heading size="md" mb={4}>Workout Logging</Heading>
+          <Text>Log your workouts to keep track of your progress.</Text>
+          <Link to="/workout-log">
+            <Button colorScheme="blue" mt={4}>Log a Workout</Button>
+          </Link>
         </Box>
       </VStack>
     </Container>
